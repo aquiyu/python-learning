@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env/python3
 #
 # Demonstrates simple use of the arg parse library
 #
@@ -14,7 +14,7 @@ def validate_number(number):
     if number <= 0:
         return False
 
-    return number <= 500 
+    return number <= 500
 
 # Validate a min/max range
 def validate_range(min,max):
@@ -80,7 +80,7 @@ def generate_numbers(count,min,max,width):
         # "{:>5}.format(15) - results in '   15'"
 
         print(pattern.format(random.randint(min,max)))
-        
+
 
 
 # Execute the main function if called directly
