@@ -35,6 +35,21 @@ def print_help(msg, parser):
 #Determine maximum value width
 def get_max_width(max):
     return len(str(max)) + 1
+
+
+# Main application starting point
+def main():
+
+    # Initialize the arg parser object
+    parser = argparse.ArgumentParser(description="Anthony's boilerplate script demonstrating the user of argument parsing")
+
+    # To make this optional, set a default=blah argument
+    # In this case, we're requirng a single number
+    parser.add_argument('--number', '-n',
+        type=int, action='store', dest='number', required=True,
+        help='Number of values to generate (Max: 500)')
+    parser.add_argument('--min', '-a', type=int, action='store', dest='minimum', default=0,
+        help='minimum possible random integer')
     parser.add_argument('--max', '-b', type=int, action='store', dest='maximum', default=9,
         help='maximum possible random integer')
 
